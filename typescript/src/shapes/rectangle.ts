@@ -1,18 +1,12 @@
-interface Rectangle {
-    width: number,
-    height: number,
-    computeArea: () => number
-}
+import { Shape } from "./shape";
 
-function newRectangle(width: number, height: number): Rectangle {
+
+function newRectangle(width: number, height: number): Shape {
     return {
-        width,
-        height,
-
         computeArea: function (): number {
-            return width * height
-        }
-    }
+            return width * height;
+        },
+    };
 }
 
-export { Rectangle, newRectangle }
+export { newRectangle };
